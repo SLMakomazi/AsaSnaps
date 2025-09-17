@@ -1,0 +1,92 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://asavelaphoto.com/sitemap.xml
+
+# Disallow admin and API routes
+Disallow: /admin/
+Disallow: /api/
+Disallow: /*?*
+
+# Allow all other paths
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.webp$
+
+# Crawl-delay: 10
+
+# Development environment
+User-agent: *
+Disallow: /staging/
+Disallow: /test/
+
+# Hosting provider specific
+User-agent: bingbot
+Crawl-delay: 10
+
+User-agent: Yandex
+Crawl-delay: 10
+
+# Image search
+User-agent: Googlebot-Image
+Allow: /*
+Disallow: /private/
+
+# Media partners
+User-agent: Mediapartners-Google
+Allow: /*
+
+# Ad networks
+User-agent: AdsBot-Google
+Allow: /*
+
+# Social media crawlers
+User-agent: Twitterbot
+Disallow:
+
+User-agent: facebookexternalhit
+Disallow:
+
+# Block AI crawlers from using your content for training
+User-agent: CCBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: GPTBot
+Disallow: /
+
+# Block common web scrapers
+User-agent: MJ12bot
+Crawl-delay: 10
+
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+# Block bad bots
+User-agent: dotbot
+Disallow: /
+
+User-agent: rogerbot
+Disallow: /
+
+User-agent: exabot
+Disallow: /
+
+# Development and staging environments
+User-agent: *
+Disallow: /*?preview*
+Disallow: /*?preview_id*
+Disallow: /*?preview_nonce*
+Disallow: /*?preview=true*

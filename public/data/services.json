@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "Wedding Photography",
+    "icon": "💒",
+    "description": "Capture the magic of your special day with our professional wedding photography services. We document every precious moment from preparation to the last dance.",
+    "features": [
+      "Full day coverage",
+      "Pre-wedding consultation",
+      "Digital gallery with high-res images",
+      "Online gallery for sharing"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Portrait Sessions",
+    "icon": "📸",
+    "description": "Professional portrait sessions for individuals, couples, and families. Perfect for capturing special moments and milestones in your life.",
+    "features": [
+      "1-2 hour session",
+      "Multiple locations",
+      "Professional editing",
+      "Digital delivery"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Event Coverage",
+    "icon": "🎉",
+    "description": "Comprehensive coverage for corporate events, parties, and special occasions. We capture the atmosphere and key moments of your event.",
+    "features": [
+      "Customizable packages",
+      "Candid and posed shots",
+      "Quick turnaround",
+      "Online gallery"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Commercial Photography",
+    "icon": "🏢",
+    "description": "High-quality commercial photography for businesses, products, and professional headshots to enhance your brand's visual identity.",
+    "features": [
+      "Product photography",
+      "Corporate headshots",
+      "Lifestyle imagery",
+      "Brand storytelling"
+    ]
+  }
+]

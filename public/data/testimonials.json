@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "Sarah Johnson",
+    "role": "Wedding Client",
+    "image": "/testimonials/sarah.jpg",
+    "content": "Asavela captured our wedding day perfectly! The photos are absolutely stunning and truly reflect the joy and love we felt. His attention to detail and ability to capture candid moments is incredible. We'll cherish these photos forever.",
+    "rating": 5,
+    "date": "2023-05-15"
+  },
+  {
+    "id": 2,
+    "name": "Michael Brown",
+    "role": "Corporate Client",
+    "image": "",
+    "content": "We've worked with Asavela for several corporate events, and he consistently delivers exceptional quality. Professional, punctual, and talented. The photos he took at our annual conference were used in our marketing materials and received great feedback.",
+    "rating": 5,
+    "date": "2023-07-22"
+  },
+  {
+    "id": 3,
+    "name": "The Ndlovu Family",
+    "role": "Family Portrait",
+    "image": "",
+    "content": "Our family photos turned out better than we could have imagined! Asavela made us all feel comfortable in front of the camera, which isn't easy with three young kids. The natural, relaxed style of the photos is exactly what we wanted.",
+    "rating": 5,
+    "date": "2023-09-03"
+  },
+  {
+    "id": 4,
+    "name": "Lisa van der Merwe",
+    "role": "Maternity Shoot",
+    "image": "",
+    "content": "I was nervous about my maternity shoot, but Asavela put me completely at ease. The photos are absolutely breathtaking and captured this special time in our lives perfectly. I've already recommended him to all my friends!",
+    "rating": 5,
+    "date": "2023-10-17"
+  },
+  {
+    "id": 5,
+    "name": "James Wilson",
+    "role": "Product Photography",
+    "image": "",
+    "content": "Asavela's product photography has elevated our e-commerce store. The way he captures our products shows them in the best possible light, and we've seen a noticeable increase in conversions since using his photos. Highly recommended!",
+    "rating": 5,
+    "date": "2023-11-05"
+  },
+  {
+    "id": 6,
+    "name": "Thando Mbeki",
+    "role": "Graduation Photos",
+    "image": "",
+    "content": "My graduation photos are absolutely stunning! Asavela captured the joy and pride of the day perfectly. The lighting and composition are amazing, and he made the whole experience so much fun. Will definitely be booking him for future milestones!",
+    "rating": 5,
+    "date": "2023-12-12"
+  }
+]

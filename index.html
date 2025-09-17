@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#081428" />
+    <meta name="description" content="Professional photography by Asavela Mavanda. Capturing life's precious moments with creativity and passion. Specializing in wedding, portrait, and event photography in Cape Town, South Africa." />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#00b0ff" />
+    <meta name="msapplication-TileColor" content="#081428" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://asavelaphoto.com/" />
+    <meta property="og:title" content="Asavela Mavanda | Professional Photographer" />
+    <meta property="og:description" content="Capturing life's precious moments with creativity and passion. Professional photography services in Cape Town, South Africa." />
+    <meta property="og:image" content="https://asavelaphoto.com/og-image.jpg" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://asavelaphoto.com/" />
+    <meta property="twitter:title" content="Asavela Mavanda | Professional Photographer" />
+    <meta property="twitter:description" content="Capturing life's precious moments with creativity and passion. Professional photography services in Cape Town, South Africa." />
+    <meta property="twitter:image" content="https://asavelaphoto.com/og-image.jpg" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://asavelaphoto.com/" />
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    
+    <!-- Preload critical fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" /></noscript>
+    
+    <!-- Preload critical CSS -->
+    <link rel="preload" href="/src/styles/global.css" as="style" />
+    
+    <title>Asavela Mavanda | Professional Photographer | Cape Town, South Africa</title>
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" as="image" href="/src/assets/hero-bg.jpg" />
+    
+    <!-- Structured Data / Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Asavela Mavanda Photography",
+      "image": "https://asavelaphoto.com/logo.png",
+      "@id": "https://asavelaphoto.com",
+      "url": "https://asavelaphoto.com",
+      "telephone": "+27123456789",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Photo Street",
+        "addressLocality": "Cape Town",
+        "postalCode": "8001",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.9249,
+        "longitude": 18.4241
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "sameAs": [
+        "https://www.instagram.com/asavelaphoto",
+        "https://www.facebook.com/asavelaphoto",
+        "https://twitter.com/asavelaphoto",
+        "https://www.linkedin.com/in/asavelaphoto"
+      ]
+    }
+    </script>
+    
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    
+    <!-- No JS fallback -->
+    <noscript>
+      <style>
+        .no-js-message {
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          background: #ff3e00;
+          color: white;
+          padding: 1rem;
+          text-align: center;
+          z-index: 10000;
+        }
+        .no-js-message a {
+          color: white;
+          text-decoration: underline;
+        }
+      </style>
+    </noscript>
+  </head>
+  <body>
+    <noscript>
+      <div class="no-js-message">
+        This website requires JavaScript to function properly. Please enable JavaScript in your browser settings.
+      </div>
+    </noscript>
+    
+    <div id="root"></div>
+    
+    <!-- Load scripts with defer -->
+    <script type="module" src="/src/main.jsx" defer></script>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+      
+      // Service Worker Registration
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/service-worker.js')
+            .then(registration => {
+              console.log('ServiceWorker registration successful');
+            })
+            .catch(err => {
+              console.log('ServiceWorker registration failed: ', err);
+            });
+        });
+      }
+    </script>
+    
+    <!-- Load non-critical CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'" />
+  </body>
+</html>
