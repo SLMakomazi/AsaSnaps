@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import { Link } from 'react-router-dom';
-import heroData from '../../data/hero.json';
+import heroData from '@/data/hero.json';
 import './Hero.module.css';
 
 // Register GSAP plugins
@@ -109,7 +109,7 @@ const Hero = () => {
             ref={addToRefs}
             className={`slide ${index === currentSlide ? 'active' : ''}`}
             style={{
-              backgroundImage: `url(${process.env.PUBLIC_URL}${slide.image})`,
+              backgroundImage: `url(${import.meta.env.BASE_URL}${slide.image})`,
             }}
             aria-hidden={index !== currentSlide}
           >

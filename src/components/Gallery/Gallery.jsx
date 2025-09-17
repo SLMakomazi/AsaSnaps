@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import ImageViewer from 'react-simple-image-viewer';
-import galleryData from '../../data/gallery.json';
+import galleryData from '@/data/gallery.json';
 import './Gallery.module.css';
 
 // Register GSAP plugins

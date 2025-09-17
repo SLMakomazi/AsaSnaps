@@ -3,21 +3,26 @@
     {
       "id": "all",
       "name": "All",
-      "count": 28
+      "count": 12
     },
     {
       "id": "wedding",
       "name": "Wedding",
-      "count": 8,
-      "cover": "/gallery/wedding/1.jpg"
+      "count": 4,
+      "cover": "https://images.pexels.com/photos/169198/pexels-photo-169198.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       "id": "portrait",
       "name": "Portrait",
-      "count": 6,
-      "cover": "/gallery/portrait/1.jpg"
+      "count": 4,
+      "cover": "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
+      "id": "nature",
+      "name": "Nature",
+      "count": 4,
+      "cover": "https://images.pexels.com/photos/3225517/pexels-photo-3225517.jpeg?auto=compress&cs=tinysrgb&w=800"
+    }
       "id": "event",
       "name": "Event",
       "count": 5,
@@ -45,7 +50,7 @@
   "images": [
     {
       "id": 1,
-      "src": "/gallery/wedding/1.jpg",
+      "src": "https://images.pexels.com/photos/169198/pexels-photo-169198.jpeg?auto=compress&cs=tinysrgb&w=800",
       "category": "wedding",
       "alt": "Wedding couple at sunset",
       "title": "Sunset Vows",
@@ -213,10 +218,9 @@
     },
     {
       "id": 22,
-      "src": "/gallery/wedding/7.jpg",
+      "src": "https://images.pexels.com/photos/3225517/pexels-photo-3225517.jpeg?auto=compress&cs=tinysrgb&w=800",
       "category": "wedding",
-      "alt": "Wedding reception",
-      "title": "Reception",
+      "alt": "Wedding photo 1",
       "description": "Celebratory moments from the wedding reception"
     },
     {
