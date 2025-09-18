@@ -6,31 +6,66 @@ const PortfolioPreview = () => {
   const projects = [
     {
       id: 1,
-      title: 'Portrait Series',
-      category: 'Portrait',
-      image: '/images/portfolio/portrait-1.jpg',
-      slug: 'portrait-series'
+      title: 'Graduation Memories',
+      category: 'Graduations',
+      image: '/images/portfolio/graduation-1.jpg',
+      slug: 'graduation-memories'
     },
     {
       id: 2,
-      title: 'Wedding Moments',
-      category: 'Wedding',
-      image: '/images/portfolio/wedding-1.jpg',
-      slug: 'wedding-moments'
+      title: 'Matric & Prom',
+      category: 'Matric/Prom',
+      image: '/images/portfolio/matric-1.jpg',
+      slug: 'matric-prom'
     },
     {
       id: 3,
-      title: 'Commercial Work',
-      category: 'Commercial',
-      image: '/images/portfolio/commercial-1.jpg',
-      slug: 'commercial-work'
+      title: 'Wedding Gallery',
+      category: 'Wedding',
+      image: '/images/portfolio/wedding-1.jpg',
+      slug: 'wedding-gallery'
     },
     {
       id: 4,
-      title: 'Creative Shots',
-      category: 'Creative',
-      image: '/images/portfolio/creative-1.jpg',
-      slug: 'creative-shots'
+      title: 'Baby Showers',
+      category: 'Baby Showers',
+      image: '/images/portfolio/baby-shower-1.jpg',
+      slug: 'baby-showers'
+    },
+    {
+      id: 5,
+      title: 'Birthday Celebrations',
+      category: 'Birthdays',
+      image: '/images/portfolio/birthday-1.jpg',
+      slug: 'birthday-celebrations'
+    },
+    {
+      id: 6,
+      title: 'Family Portraits',
+      category: 'Family',
+      image: '/images/portfolio/family-1.jpg',
+      slug: 'family-portraits'
+    },
+    {
+      id: 7,
+      title: 'Lifestyle Shoots',
+      category: 'Lifestyle',
+      image: '/images/portfolio/lifestyle-1.jpg',
+      slug: 'lifestyle-shoots'
+    },
+    {
+      id: 8,
+      title: 'Marketing Campaigns',
+      category: 'Marketing',
+      image: '/images/portfolio/marketing-1.jpg',
+      slug: 'marketing-campaigns'
+    },
+    {
+      id: 9,
+      title: 'Traditional Ceremonies',
+      category: 'Traditional',
+      image: '/images/portfolio/traditional-1.jpg',
+      slug: 'traditional-ceremonies'
     }
   ];
 

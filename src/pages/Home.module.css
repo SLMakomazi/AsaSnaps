@@ -17,10 +17,13 @@
 /* Alternating background colors for specific section types */
 .aboutSection {
   background-color: var(--light);
+  padding-bottom: 0 !important; /* Remove bottom padding */
 }
 
 .portfolioSection {
   background-color: var(--white);
+  padding-top: 0 !important; /* Remove top padding */
+  padding-bottom: 6rem; /* Keep bottom padding */
 }
 
 .testimonialsSection {
