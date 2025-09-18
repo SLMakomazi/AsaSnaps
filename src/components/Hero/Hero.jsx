@@ -47,6 +47,36 @@ const Hero = () => {
 
   return (
     <section className={styles.hero} ref={heroRef}>
+      <div className={styles.videoContainer}>
+        <video 
+          className={styles.video} 
+          autoPlay 
+          muted 
+          loop 
+          playsInline
+        >
+          <source src="/hero/WhatsApp Video 2025-09-18 at 09.07.17_8f21a2e7.mp4" type="video/mp4" />
+        </video>
+        <video 
+          className={styles.video} 
+          autoPlay 
+          muted 
+          loop 
+          playsInline
+        >
+          <source src="/hero/WhatsApp Video 2025-09-18 at 09.52.39_2e377330.mp4" type="video/mp4" />
+        </video>
+        <video 
+          className={styles.video} 
+          autoPlay 
+          muted 
+          loop 
+          playsInline
+        >
+          <source src="/hero/WhatsApp Video 2025-09-18 at 09.52.49_6cc371b3.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div className={styles.overlay}></div>
       <div className={styles.container}>
         <div className={styles.content}>
           <h1 className={styles.title} ref={titleRef}>
