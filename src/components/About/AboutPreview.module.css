@@ -51,6 +51,11 @@
   transform: skew(-12deg) translateX(-5px);
 }
 
+.highlightName {
+  color: #FF6B6B;
+  font-weight: 600;
+}
+
 .description {
   color: var(--gray);
   margin-bottom: 1.5rem;

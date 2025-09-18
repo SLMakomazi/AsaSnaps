@@ -59,11 +59,11 @@
   height: 100%;
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.7) 0%,
-    rgba(0, 0, 0, 0.5) 30%,
-    rgba(0, 0, 0, 0.4) 50%,
-    rgba(0, 0, 0, 0.5) 70%,
-    rgba(0, 0, 0, 0.7) 100%
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.65) 30%,
+    rgba(0, 0, 0, 0.55) 60%,
+    rgba(0, 0, 0, 0.65) 80%,
+    rgba(0, 0, 0, 0.8) 100%
   );
   z-index: 1;
   pointer-events: none;
@@ -121,6 +121,12 @@
   margin-right: auto;
   line-height: 1.6;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.highlightName {
+  color: #FF6B6B;
+  font-weight: 600;
+  text-shadow: none;
 }
 
 .ctaContainer {

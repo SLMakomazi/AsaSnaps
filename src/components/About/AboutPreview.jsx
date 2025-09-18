@@ -18,7 +18,7 @@ const AboutPreview = () => {
               Capturing Life's <span className={styles.highlight}>Moments</span> with Passion
             </h2>
             <p className={styles.description}>
-              With over 5 years of experience in professional photography, I specialize in capturing the essence of every moment. 
+              With over 5 years of experience in professional photography, <span className={styles.highlightName}>Asavela Mavanda</span> specializes in capturing the essence of every moment. 
               My approach combines technical expertise with a creative eye to deliver stunning images that tell your unique story.
             </p>
             <p className={styles.description}>

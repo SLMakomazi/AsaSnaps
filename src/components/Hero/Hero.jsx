@@ -83,7 +83,7 @@ const Hero = () => {
             Capturing Life's <span className={styles.highlight}>Precious</span> Moments
           </h1>
           <p className={styles.subtitle} ref={subtitleRef}>
-            Professional photography services by Asavela Mavanda. Specializing in weddings, 
+            Professional photography services by <span className={styles.highlightName}>Asavela Mavanda</span>. Specializing in weddings, 
             portraits, events, and commercial photography.
           </p>
           <div className={styles.ctaContainer} ref={ctaRef}>
