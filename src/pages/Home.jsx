@@ -5,6 +5,7 @@ import Hero from '../components/Hero/Hero';
 import AboutPreview from '../components/About/AboutPreview';
 import PortfolioPreview from '../components/Portfolio/PortfolioPreview';
 import Testimonials from '../components/Testimonials/Testimonials';
+import Partnerships from '../components/Partnerships/Partnerships';
 import ContactCTA from '../components/Contact/ContactCTA';
 import Header from '../components/Header/Header';
 import styles from './Home.module.css';
@@ -68,6 +69,11 @@ const Home = () => {
         {/* Testimonials Section */}
         <section ref={addToRefs} className={`${styles.section} ${styles.testimonialsSection}`}>
           <Testimonials />
+        </section>
+
+        {/* Partnerships Section */}
+        <section ref={addToRefs} className={`${styles.section} ${styles.partnershipsSection}`}>
+          <Partnerships />
         </section>
 
         {/* Contact CTA Section - No background, uses its own styling */}
