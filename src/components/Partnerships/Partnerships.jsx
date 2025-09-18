@@ -46,44 +46,105 @@ const Partnerships = () => {
   }, []);
 
   // Function to create a logo item with alternating vertical offset
-  const LogoItem = ({ src, alt, width, index }) => (
+  const LogoItem = ({ svg, alt, width, index }) => (
     <div 
       className={styles.logoItem} 
       style={{ 
         transform: `translateY(${index % 2 === 0 ? '-15px' : '15px'})`,
-        transition: 'transform 0.3s ease'
+        transition: 'transform 0.3s ease',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
       }}
+      aria-label={alt}
     >
-      <img 
-        src={src} 
-        alt={alt} 
+      <div 
         className={styles.logo} 
-        style={{ width: `${width}px`, height: 'auto' }} 
+        style={{ width: `${width}px` }}
+        dangerouslySetInnerHTML={{ __html: svg }}
       />
     </div>
   );
 
-  // Logos data
+  // Logos data with inline SVGs
   const firstRowLogos = [
-    { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/DJI_logo.png/320px-DJI_logo.png', alt: 'DJI', width: 80 },
-    { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/GoPro_Logo.svg/320px-GoPro_Logo.svg.png', alt: 'GoPro', width: 120 },
-    { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Samsung_Logo.svg/320px-Samsung_Logo.svg.png', alt: 'Samsung', width: 150 },
-    { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Leica_Camera_logo.svg/320px-Leica_Camera_logo.svg.png', alt: 'Leica', width: 100 },
-    { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Fujifilm_logo.svg/320px-Fujifilm_logo.svg.png', alt: 'Fujifilm', width: 140 },
-    { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Blackmagic_Design_logo.svg/320px-Blackmagic_Design_logo.svg.png', alt: 'Blackmagic', width: 150 },
-    { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Panasonic_logo_%28Blue%29.svg/320px-Panasonic_logo_%28Blue%29.svg.png', alt: 'Panasonic', width: 140 },
-    { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Adobe_Corporate_Logo.png/320px-Adobe_Corporate_Logo.png', alt: 'Adobe', width: 100 },
+    { 
+      svg: `<svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg">
+        <path d="M160 0C71.6 0 0 71.6 0 160s71.6 160 160 160 160-71.6 160-160S248.4 0 160 0zm0 290.9c-72.2 0-130.9-58.7-130.9-130.9S87.8 29.1 160 29.1 290.9 87.8 290.9 160 232.2 290.9 160 290.9z" fill="#000"/>
+        <path d="M160 58.2c-56.2 0-101.8 45.6-101.8 101.8S103.8 261.8 160 261.8 261.8 216.2 261.8 160 216.2 58.2 160 58.2zm0 174.5c-40.1 0-72.7-32.6-72.7-72.7s32.6-72.7 72.7-72.7 72.7 32.6 72.7 72.7-32.6 72.7-72.7 72.7z" fill="#000"/>
+        <path d="M160 87.3c-40.1 0-72.7 32.6-72.7 72.7s32.6 72.7 72.7 72.7 72.7-32.6 72.7-72.7-32.6-72.7-72.7-72.7z" fill="#000"/>
+      </svg>`, 
+      alt: 'DJI', 
+      width: 80 
+    },
+    { 
+      svg: `<svg viewBox="0 0 320 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M60 0h40v100H60z" fill="#00aef0"/>
+        <path d="M100 0h40v100h-40z" fill="#fff"/>
+        <path d="M140 0h40v100h-40z" fill="#00aef0"/>
+        <path d="M180 0h40v100h-40z" fill="#fff"/>
+        <path d="M220 0h40v100h-40z" fill="#00aef0"/>
+      </svg>`, 
+      alt: 'GoPro', 
+      width: 120 
+    },
+    { 
+      svg: `<svg viewBox="0 0 320 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M40 0h240v100H40z" fill="#1428a0"/>
+        <path d="M60 20h200v60H60z" fill="#fff"/>
+        <ellipse cx="160" cy="50" rx="40" ry="30" fill="#1428a0"/>
+      </svg>`, 
+      alt: 'Samsung', 
+      width: 150 
+    },
+    { 
+      svg: `<svg viewBox="0 0 320 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M40 0h240v100H40z" fill="#000"/>
+        <path d="M80 20h160v60H80z" fill="#fff"/>
+        <path d="M100 30h120v40H100z" fill="#000"/>
+      </svg>`, 
+      alt: 'Leica', 
+      width: 100 
+    },
   ];
 
   const secondRowLogos = [
-    { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Hasselblad_logo.svg/320px-Hasselblad_logo.svg.png', alt: 'Hasselblad', width: 160 },
-    { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Canon_logo_2016.svg/320px-Canon_logo_2016.svg.png', alt: 'Canon', width: 140 },
-    { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Nikon_logo.svg/320px-Nikon_logo.svg.png', alt: 'Nikon', width: 120 },
-    { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Phase_One_logo.svg/320px-Phase_One_logo.svg.png', alt: 'Phase One', width: 160 },
-    { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Sony_Logo_2019.svg/320px-Sony_Logo_2019.svg.png', alt: 'Sony', width: 140 },
-    { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Olympus_Logo.svg/320px-Olympus_Logo.svg.png', alt: 'Olympus', width: 140 },
-    { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Sigma_logo.svg/320px-Sigma_logo.svg.png', alt: 'Sigma', width: 120 },
-    { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Tamron_logo_2018.svg/320px-Tamron_logo_2018.svg.png', alt: 'Tamron', width: 140 },
+    { 
+      svg: `<svg viewBox="0 0 320 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M40 0h240v100H40z" fill="#ed1c24"/>
+        <path d="M80 20h160v60H80z" fill="#fff"/>
+        <path d="M100 30h120v40H100z" fill="#ed1c24"/>
+      </svg>`, 
+      alt: 'Canon', 
+      width: 140 
+    },
+    { 
+      svg: `<svg viewBox="0 0 320 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M40 0h240v100H40z" fill="#ffd700"/>
+        <path d="M80 20h160v60H80z" fill="#000"/>
+        <path d="M100 30h120v40H100z" fill="#ffd700"/>
+      </svg>`, 
+      alt: 'Nikon', 
+      width: 120 
+    },
+    { 
+      svg: `<svg viewBox="0 0 320 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M40 0h240v100H40z" fill="#000"/>
+        <path d="M80 20h160v60H80z" fill="#fff"/>
+        <path d="M100 30h120v40H100z" fill="#000"/>
+      </svg>`, 
+      alt: 'Sony', 
+      width: 140 
+    },
+    { 
+      svg: `<svg viewBox="0 0 320 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M40 0h240v100H40z" fill="#0000ff"/>
+        <path d="M80 20h160v60H80z" fill="#fff"/>
+        <path d="M100 30h120v40H100z" fill="#0000ff"/>
+      </svg>`, 
+      alt: 'Olympus', 
+      width: 140 
+    },
   ];
 
   // Duplicate logos for seamless looping
