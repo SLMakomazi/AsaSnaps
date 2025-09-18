@@ -181,11 +181,11 @@
 .bottomSection {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding: 1.5rem 0;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
+  justify-content: center;
+  gap: 1.5rem;
   text-align: center;
 }
 
@@ -217,13 +217,58 @@
   opacity: 0.5;
 }
 
+.credit {
+  color: var(--light-gray);
+  font-size: 0.9rem;
+}
+
+.creditLink {
+  color: #FF6B6B !important;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all var(--transition-normal) ease;
+  position: relative;
+}
+
+.creditLink:hover {
+  color: #ff5252 !important;
+  text-decoration: underline;
+}
+
 /* Responsive */
-@media (min-width: 768px) {
+.bottomColumn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.legalLinks {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.credit {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
   .bottomSection {
-    flex-direction: row;
-    text-align: left;
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
   
+  .bottomColumn {
+    padding: 0.5rem 0;
+  }
+}
+
+@media (min-width: 769px) {
   .topSection {
     grid-template-columns: 2fr 1fr 1fr 2fr;
   }

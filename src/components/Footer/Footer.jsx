@@ -104,17 +104,35 @@ const Footer = () => {
         </div>
 
         <div className={styles.bottomSection}>
-          <p className={styles.copyright}>
-            &copy; {currentYear} AsaSnaps. All rights reserved.
-          </p>
-          <div className={styles.legalLinks}>
-            <Link to="/privacy-policy" className={styles.legalLink}>
-              Privacy Policy
-            </Link>
-            <span className={styles.divider}>|</span>
-            <Link to="/terms" className={styles.legalLink}>
-              Terms of Service
-            </Link>
+          <div className={styles.bottomColumn}>
+            <p className={styles.copyright}>
+              &copy; {currentYear} AsaSnaps. All rights reserved.
+            </p>
+          </div>
+          <div className={styles.bottomColumn}>
+            <div className={styles.legalLinks}>
+              <Link to="/privacy-policy" className={styles.legalLink}>
+                Privacy Policy
+              </Link>
+              <span className={styles.divider}>|</span>
+              <Link to="/terms" className={styles.legalLink}>
+                Terms of Service
+              </Link>
+            </div>
+          </div>
+          <div className={styles.bottomColumn}>
+            <div className={styles.credit}>
+              Created by {'  '}
+              <a 
+                href="https://calvin-tech-solutions.vercel.app/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                style={{ color: '#FF6B6B', textDecoration: 'none' }}
+                className={styles.creditLink}
+              >
+                 Calvin Tech Solutions
+              </a>
+            </div>
           </div>
         </div>
       </div>
