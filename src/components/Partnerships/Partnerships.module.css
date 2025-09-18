@@ -1,74 +1,90 @@
-.partnerships {
-  padding: 3rem 0;
+.partnersContainer {
+  width: 100%;
+  padding: 4rem 0;
   background-color: #ffffff;
   overflow: hidden;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
+  position: relative;
+  text-align: center;
 }
 
 .title {
-  text-align: center;
-  font-size: 1.8rem;
-  margin-bottom: 2rem;
+  font-size: 2.2rem;
   color: #333;
+  margin-bottom: 2.5rem;
   font-weight: 600;
+  position: relative;
+  display: inline-block;
 }
 
-.partnersContainer {
-  position: relative;
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: #4a90e2;
+  border-radius: 3px;
+}
+
+.scrollContainer {
   width: 100%;
-  overflow: hidden;
-  padding: 2rem 0;
-  min-height: 200px;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 3rem;
+  overflow: hidden;
 }
 
 .logoRow {
   display: flex;
   align-items: center;
-  width: max-content;
-  will-change: transform;
-  gap: 4rem;
-  padding: 1rem 0;
   white-space: nowrap;
+  will-change: transform;
+  padding: 1.5rem 0;
+  position: relative;
+  width: max-content;
+  min-width: 100%;
+}
+
+.firstRow {
+  animation: scrollLeft 30s linear infinite;
+}
+
+.secondRow {
+  animation: scrollRight 30s linear infinite;
 }
 
 .logoItem {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.5rem 1.5rem;
-  opacity: 0.8;
+  padding: 0.8rem 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
-  transform: translateY(var(--offset, 0));
+  opacity: 0.9;
+  margin: 0 0.5rem;
+  flex-shrink: 0;
   will-change: transform;
 }
 
-.partnerItem:hover {
+.logoItem:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   opacity: 1;
-}
-
-.logoContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  z-index: 1;
 }
 
 .logo {
-  max-height: 60px;
+  height: 40px;
   width: auto;
+  max-width: 120px;
   object-fit: contain;
-  opacity: 0.7;
   transition: all 0.3s ease;
-  filter: grayscale(100%) opacity(0.8);
+  filter: grayscale(100%) opacity(0.7);
+  will-change: transform;
 }
 
 .logoItem:hover .logo {
@@ -76,7 +92,6 @@
   transform: scale(1.1);
 }
 
-/* Animation for logo rows */
 @keyframes scrollLeft {
   0% {
     transform: translateX(0);
@@ -95,27 +110,55 @@
   }
 }
 
+/* Pause animation on hover */
+.partnersContainer:hover .logoRow {
+  animation-play-state: paused;
+}
+
 /* Responsive styles */
-@media (max-width: 768px) {
-  .partnerships {
-    padding: 2rem 0;
-  }
-  
-  .title {
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
+@media (max-width: 1024px) {
+  .logo {
+    height: 35px;
+    max-width: 100px;
   }
   
   .logoItem {
-    padding: 0.5rem 1rem;
+    padding: 0.6rem 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .partnersContainer {
+    padding: 3rem 0;
   }
   
   .logo {
-    max-height: 40px;
+    height: 30px;
+    max-width: 80px;
   }
   
-  .partnersContainer {
-    gap: 1rem;
-    min-height: 150px;
+  .logoItem {
+    padding: 0.5rem 1.2rem;
+    margin: 0 0.3rem;
+  }
+  
+  .scrollContainer {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    height: 25px;
+    max-width: 70px;
+  }
+  
+  .logoItem {
+    padding: 0.4rem 1rem;
+    margin: 0 0.2rem;
+  }
+  
+  .scrollContainer {
+    gap: 1.5rem;
   }
 }

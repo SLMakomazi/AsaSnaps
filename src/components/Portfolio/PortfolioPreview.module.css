@@ -17,7 +17,21 @@
 .sectionHeader h2 {
   font-size: 2.5rem;
   color: var(--dark);
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.sectionHeader h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: #4a90e2;
+  border-radius: 3px;
 }
 
 .sectionHeader p {
