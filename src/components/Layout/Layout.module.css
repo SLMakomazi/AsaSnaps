@@ -1,0 +1,36 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--light);
+  color: var(--dark);
+}
+
+.main {
+  flex: 1;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  transition: all var(--transition-normal) ease;
+}
+
+/* Ensure the main content doesn't get hidden behind the fixed header */
+.main {
+  padding-top: 80px; /* Adjust based on your header height */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .main {
+    padding-top: 70px; /* Slightly less padding on mobile */
+  }
+}
+
+/* Loading container for suspense fallback */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--light);
+}

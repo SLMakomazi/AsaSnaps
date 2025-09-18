@@ -1,0 +1,294 @@
+.aboutPreview {
+  width: 100%;
+  padding: 6rem 0;
+  background-color: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.textContent {
+  flex: 1;
+  max-width: 600px;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+  color: var(--dark);
+}
+
+.highlight {
+  color: var(--primary);
+  position: relative;
+  display: inline-block;
+}
+
+.highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  height: 12px;
+  background-color: rgba(255, 107, 107, 0.2);
+  z-index: -1;
+  transform: skew(-12deg) translateX(-5px);
+}
+
+.description {
+  color: var(--gray);
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.stats {
+  display: flex;
+  gap: 2.5rem;
+  margin: 2.5rem 0;
+  flex-wrap: wrap;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.statNumber {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-heading);
+}
+
+.statLabel {
+  color: var(--dark-gray);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.learnMore {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.learnMore:hover {
+  color: var(--primary-hover);
+  gap: 0.8rem;
+}
+
+.learnMore svg {
+  transition: transform 0.3s ease;
+}
+
+.learnMore:hover svg {
+  transform: translateX(5px);
+}
+
+.imageContainer {
+  flex: 1;
+  position: relative;
+  max-width: 500px;
+  margin-left: auto;
+}
+
+.imageWrapper {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+  aspect-ratio: 3/4;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1));
+  z-index: 1;
+}
+
+.experienceBadge {
+  position: absolute;
+  bottom: -30px;
+  right: 30px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(255, 107, 107, 0.3);
+  z-index: 2;
+  min-width: 150px;
+}
+
+.years {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+  font-family: var(--font-heading);
+}
+
+.text {
+  font-size: 0.9rem;
+  font-weight: 500;
+  opacity: 0.9;
+  letter-spacing: 0.5px;
+}
+
+/* Decorative elements */
+.decorativeShape {
+  position: absolute;
+  z-index: 0;
+  opacity: 0.1;
+}
+
+.shape1 {
+  top: 10%;
+  left: 5%;
+  width: 200px;
+  height: 200px;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  background: linear-gradient(45deg, var(--primary), var(--secondary));
+  animation: float 8s ease-in-out infinite;
+}
+
+.shape2 {
+  bottom: 10%;
+  right: 5%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, var(--secondary), var(--accent));
+  animation: float 10s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .content {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  
+  .textContent, 
+  .imageContainer {
+    max-width: 100%;
+    margin: 0;
+  }
+  
+  .title {
+    font-size: 2.2rem;
+  }
+  
+  .stats {
+    justify-content: flex-start;
+  }
+  
+  .experienceBadge {
+    right: 20px;
+    bottom: -25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutPreview {
+    padding: 4rem 0;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .description {
+    font-size: 1rem;
+  }
+  
+  .stats {
+    gap: 1.5rem;
+  }
+  
+  .statNumber {
+    font-size: 1.8rem;
+  }
+  
+  .experienceBadge {
+    padding: 1rem 1.5rem;
+  }
+  
+  .years {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.8rem;
+  }
+  
+  .stats {
+    gap: 1.5rem 2.5rem;
+  }
+  
+  .statItem {
+    flex: 1 0 calc(50% - 1.25rem);
+  }
+  
+  .experienceBadge {
+    right: 10px;
+    bottom: -20px;
+    padding: 0.8rem 1.2rem;
+  }
+  
+  .years {
+    font-size: 1.8rem;
+  }
+  
+  .text {
+    font-size: 0.8rem;
+  }
+}

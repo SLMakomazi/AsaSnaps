@@ -1,174 +1,160 @@
-import { useEffect, useRef, useState } from 'react';
-import { gsap } from 'gsap';
-import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import heroData from '@/data/hero.json';
-import './Hero.module.css';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import styles from './Hero.module.css';
 
-// Register GSAP plugins
-gsap.registerPlugin(ScrollToPlugin);
+// Register ScrollTrigger plugin
+gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
   const heroRef = useRef(null);
-  const slidesRef = useRef([]);
-  const intervalRef = useRef(null);
+  const titleRef = useRef(null);
+  const subtitleRef = useRef(null);
+  const ctaRef = useRef(null);
+  const imageRefs = useRef([]);
 
-  // Add slide to ref array
-  const addToRefs = (el) => {
-    if (el && !slidesRef.current.includes(el)) {
-      slidesRef.current.push(el);
+  // Add image to refs array
+  const addToImageRefs = (el) => {
+    if (el && !imageRefs.current.includes(el)) {
+      imageRefs.current.push(el);
     }
   };
 
-  // Handle slide change
-  const goToSlide = (index) => {
-    clearInterval(intervalRef.current);
-    setCurrentSlide(index);
-    startAutoSlide();
-  };
-
-  // Auto slide functionality
-  const startAutoSlide = () => {
-    clearInterval(intervalRef.current);
-    intervalRef.current = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % heroData.slides.length);
-    }, 6000);
-  };
-
-  // Pause on hover
-  const handleMouseEnter = () => {
-    clearInterval(intervalRef.current);
-  };
-
-  const handleMouseLeave = () => {
-    startAutoSlide();
-  };
-
-  // Initialize animations and auto-slide
   useEffect(() => {
-    // Initial animation
-    gsap.from(heroRef.current, {
-      opacity: 0,
-      duration: 1,
-      ease: 'power2.out',
+    // Hero content animation
+    const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+    
+    // Animate title and subtitle
+    tl.fromTo(
+      [titleRef.current, subtitleRef.current],
+      { y: 30, opacity: 0 },
+      { 
+        y: 0, 
+        opacity: 1, 
+        duration: 1,
+        stagger: 0.2,
+        ease: 'power3.out'
+      }
+    );
+    
+    // Animate CTA button
+    tl.fromTo(
+      ctaRef.current,
+      { y: 20, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.8 },
+      '-=0.5'
+    );
+
+    // Animate images with staggered delay
+    imageRefs.current.forEach((img, index) => {
+      tl.fromTo(
+        img,
+        { scale: 0.8, opacity: 0, y: 30 },
+        { 
+          scale: 1, 
+          opacity: 1, 
+          y: 0, 
+          duration: 0.8, 
+          ease: 'back.out(1.7)',
+          delay: index * 0.1
+        },
+        '-=0.5'
+      );
     });
 
-    // Start auto-slide
-    startAutoSlide();
+    // Parallax effect on scroll
+    const parallaxTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: heroRef.current,
+        start: 'top top',
+        end: 'bottom top',
+        scrub: true,
+      },
+    });
 
-    // Clean up interval on unmount
-    return () => clearInterval(intervalRef.current);
+    // Add parallax effect to images
+    imageRefs.current.forEach((img, index) => {
+      const yOffset = (index + 1) * 30; // Staggered vertical movement
+      parallaxTl.to(
+        img,
+        { y: yOffset, ease: 'none' },
+        0
+      );
+    });
+
+    // Clean up animations on unmount
+    return () => {
+      tl.kill();
+      parallaxTl.kill();
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
   }, []);
 
-  // Animate slide change
-  useEffect(() => {
-    slidesRef.current.forEach((slide, index) => {
-      if (index === currentSlide) {
-        gsap.to(slide, {
-          opacity: 1,
-          scale: 1.05,
-          duration: 2,
-          ease: 'power2.inOut',
-        });
-      } else {
-        gsap.to(slide, {
-          opacity: 0,
-          scale: 1,
-          duration: 1,
-          ease: 'power2.inOut',
-        });
-      }
-    });
-  }, [currentSlide]);
-
-  // Handle scroll to section
-  const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      gsap.to(window, {
-        duration: 1,
-        scrollTo: { y: `#${id}`, offsetY: 80 },
-        ease: 'power2.inOut',
-      });
-    }
-  };
-
   return (
-    <section
-      ref={heroRef}
-      className="hero"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
-      {/* Slideshow */}
-      <div className="slideshow">
-        {heroData.slides.map((slide, index) => (
-          <div
-            key={slide.id}
-            ref={addToRefs}
-            className={`slide ${index === currentSlide ? 'active' : ''}`}
-            style={{
-              backgroundImage: `url(${import.meta.env.BASE_URL}${slide.image})`,
-            }}
-            aria-hidden={index !== currentSlide}
-          >
-            <div className="overlay" />
+    <section className={styles.hero} ref={heroRef}>
+      <div className={styles.container}>
+        <div className={styles.content}>
+          <h1 className={styles.title} ref={titleRef}>
+            Capturing Life's <span className={styles.highlight}>Precious</span> Moments
+          </h1>
+          <p className={styles.subtitle} ref={subtitleRef}>
+            Professional photography services by Asavela Mavanda. Specializing in weddings, 
+            portraits, events, and commercial photography.
+          </p>
+          <div className={styles.ctaContainer} ref={ctaRef}>
+            <Link to="/contact" className={styles.ctaPrimary}>
+              Book a Session
+            </Link>
+            <Link to="/gallery" className={styles.ctaSecondary}>
+              View Portfolio
+            </Link>
           </div>
-        ))}
-      </div>
+        </div>
 
-      {/* Hero Content */}
-      <div className="hero-content">
-        <div className="container">
-          <div className="hero-text">
-            <h1 className="hero-title">ASAVELA MAVANDA</h1>
-            <div className="typewriter">
-              <p className="hero-subtitle">
-                {heroData.subtitles[currentSlide % heroData.subtitles.length]}
-              </p>
+        <div className={styles.imageGrid}>
+          {/* Main featured image */}
+          <div 
+            ref={addToImageRefs} 
+            className={`${styles.imageWrapper} ${styles.featuredImage}`}
+          >
+            <img 
+              src="/images/hero/hero-1.jpg" 
+              alt="Featured photography work" 
+              className={styles.image}
+            />
+          </div>
+          
+          {/* Secondary images */}
+          <div className={styles.secondaryImages}>
+            <div 
+              ref={addToImageRefs} 
+              className={`${styles.imageWrapper} ${styles.secondaryImage} ${styles.image1}`}
+            >
+              <img 
+                src="/images/hero/hero-2.jpg" 
+                alt="Portrait photography" 
+                className={styles.image}
+              />
             </div>
-            <div className="hero-buttons">
-              <button
-                className="btn btn-primary"
-                onClick={() => scrollToSection('contact')}
-              >
-                Book a Shoot
-              </button>
-              <button
-                className="btn btn-secondary"
-                onClick={() => scrollToSection('about')}
-              >
-                Learn More
-              </button>
+            
+            <div 
+              ref={addToImageRefs} 
+              className={`${styles.imageWrapper} ${styles.secondaryImage} ${styles.image2}`}
+            >
+              <img 
+                src="/images/hero/hero-3.jpg" 
+                alt="Event photography" 
+                className={styles.image}
+              />
             </div>
           </div>
         </div>
       </div>
-
-      {/* Slide Indicators */}
-      <div className="slide-indicators">
-        {heroData.slides.map((_, index) => (
-          <button
-            key={index}
-            className={`indicator ${index === currentSlide ? 'active' : ''}`}
-            onClick={() => goToSlide(index)}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
-      </div>
-
-      {/* Floating Action Button */}
-      <a
-        href={heroData.bookingLink}
-        className="floating-btn"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Book a shoot"
-      >
-        <span className="btn-icon">📸</span>
-        <span className="btn-text">Book Now</span>
-      </a>
+      
+      {/* Decorative elements */}
+      <div className={styles.decorativeElement1}></div>
+      <div className={styles.decorativeElement2}></div>
     </section>
   );
 };
