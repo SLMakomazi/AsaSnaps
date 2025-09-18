@@ -47,7 +47,7 @@ const Header = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <span>Asa</span>Snaps
+            <span>Asavela</span>Mavanda
           </Motion.span>
         </Link>
 

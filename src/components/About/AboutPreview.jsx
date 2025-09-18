@@ -65,7 +65,7 @@ const AboutPreview = () => {
           >
             <div className={styles.imageWrapper}>
               <img 
-                src="/images/about-preview.jpg" 
+                src="/about/WhatsApp Image 2025-09-18 at 12.55.21_692344ea.jpg" 
                 alt="Asavela Mavanda - Professional Photographer" 
                 className={styles.image}
                 loading="lazy"

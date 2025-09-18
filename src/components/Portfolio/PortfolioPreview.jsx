@@ -8,63 +8,63 @@ const PortfolioPreview = () => {
       id: 1,
       title: 'Graduation Memories',
       category: 'Graduations',
-      image: '/images/portfolio/graduation-1.jpg',
+      image: 'https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?auto=compress&cs=tinysrgb&w=800',
       slug: 'graduation-memories'
     },
     {
       id: 2,
       title: 'Matric & Prom',
       category: 'Matric/Prom',
-      image: '/images/portfolio/matric-1.jpg',
+      image: 'https://images.pexels.com/photos/2479312/pexels-photo-2479312.jpeg?auto=compress&cs=tinysrgb&w=800',
       slug: 'matric-prom'
     },
     {
       id: 3,
       title: 'Wedding Gallery',
       category: 'Wedding',
-      image: '/images/portfolio/wedding-1.jpg',
+      image: 'https://images.pexels.com/photos/169186/pexels-photo-169186.jpeg?auto=compress&cs=tinysrgb&w=800',
       slug: 'wedding-gallery'
     },
     {
       id: 4,
       title: 'Baby Showers',
       category: 'Baby Showers',
-      image: '/images/portfolio/baby-shower-1.jpg',
+      image: 'https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=800',
       slug: 'baby-showers'
     },
     {
       id: 5,
       title: 'Birthday Celebrations',
       category: 'Birthdays',
-      image: '/images/portfolio/birthday-1.jpg',
+      image: 'https://images.pexels.com/photos/2531546/pexels-photo-2531546.jpeg?auto=compress&cs=tinysrgb&w=800',
       slug: 'birthday-celebrations'
     },
     {
       id: 6,
       title: 'Family Portraits',
       category: 'Family',
-      image: '/images/portfolio/family-1.jpg',
+      image: 'https://images.pexels.com/photos/3935702/pexels-photo-3935702.jpeg?auto=compress&cs=tinysrgb&w=800',
       slug: 'family-portraits'
     },
     {
       id: 7,
       title: 'Lifestyle Shoots',
       category: 'Lifestyle',
-      image: '/images/portfolio/lifestyle-1.jpg',
+      image: 'https://images.pexels.com/photos/2681751/pexels-photo-2681751.jpeg?auto=compress&cs=tinysrgb&w=800',
       slug: 'lifestyle-shoots'
     },
     {
       id: 8,
       title: 'Marketing Campaigns',
       category: 'Marketing',
-      image: '/images/portfolio/marketing-1.jpg',
+      image: 'https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&cs=tinysrgb&w=800',
       slug: 'marketing-campaigns'
     },
     {
       id: 9,
       title: 'Traditional Ceremonies',
       category: 'Traditional',
-      image: '/images/portfolio/traditional-1.jpg',
+      image: 'https://images.pexels.com/photos/1898555/pexels-photo-1898555.jpeg?auto=compress&cs=tinysrgb&w=800',
       slug: 'traditional-ceremonies'
     }
   ];

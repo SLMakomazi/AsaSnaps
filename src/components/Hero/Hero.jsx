@@ -55,7 +55,7 @@ const Hero = () => {
           loop 
           playsInline
         >
-          <source src="/hero/WhatsApp Video 2025-09-18 at 09.07.17_8f21a2e7.mp4" type="video/mp4" />
+          <source src="/hero/WhatsApp Video 2025-09-18 at 09.52.39_2e377330.mp4" type="video/mp4" />
         </video>
         <video 
           className={styles.video} 
@@ -64,7 +64,7 @@ const Hero = () => {
           loop 
           playsInline
         >
-          <source src="/hero/WhatsApp Video 2025-09-18 at 09.52.39_2e377330.mp4" type="video/mp4" />
+          <source src="/hero/WhatsApp Video 2025-09-18 at 09.07.17_8f21a2e7.mp4" type="video/mp4" />
         </video>
         <video 
           className={styles.video} 
