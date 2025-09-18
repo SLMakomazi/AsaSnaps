@@ -1,8 +1,8 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { lazy, Suspense } from 'react';
+import { lazy, Suspense, useState, useEffect } from 'react';
 import Layout from './components/Layout/Layout';
-import LoadingSpinner from './components/UI/LoadingSpinner';
+import LoadingScreen from './components/UI/LoadingScreen';
 
 // Lazy load page components
 const Home = lazy(() => import('./pages/Home'));
@@ -12,6 +12,22 @@ const Gallery = lazy(() => import('./pages/Gallery'));
 const Contact = lazy(() => import('./pages/Contact'));
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+  const location = useLocation();
+  
+  // Hide loading screen after 4 seconds or when route changes
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 4000);
+    
+    return () => clearTimeout(timer);
+  }, [location.pathname]);
+  
+  if (isLoading) {
+    return <LoadingScreen />;
+  }
+
   return (
     <>
       <Helmet>
@@ -35,13 +51,7 @@ function App() {
         <meta property="twitter:image" content="/images/social-preview.jpg" />
       </Helmet>
 
-      <Suspense 
-        fallback={
-          <div className="loading-container">
-            <LoadingSpinner />
-          </div>
-        }
-      >
+      <Suspense fallback={null}>
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
