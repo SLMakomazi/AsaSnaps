@@ -10,7 +10,7 @@ const testimonials = [
     role: 'CEO, Creative Agency',
     content: 'Working with Asavela was an absolute pleasure. Their attention to detail and creative eye brought our brand vision to life in ways we never imagined.',
     rating: 5,
-    image: '/images/testimonials/person1.jpg'
+    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&auto=format&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ const testimonials = [
     role: 'Marketing Director',
     content: 'The quality of the photos exceeded our expectations. Asavela captured the essence of our products perfectly, and the results have significantly boosted our marketing efforts.',
     rating: 5,
-    image: '/images/testimonials/person2.jpg'
+    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&auto=format&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ const testimonials = [
     role: 'Bride',
     content: 'Our wedding photos are absolutely stunning! Asavela made us feel so comfortable and captured every special moment beautifully. These memories will last a lifetime.',
     rating: 5,
-    image: '/images/testimonials/person3.jpg'
+    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&auto=format&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
   }
 ];
 

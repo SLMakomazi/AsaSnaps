@@ -65,25 +65,25 @@ const Partnerships = () => {
 
   // Logos data
   const firstRowLogos = [
-    { src: 'https://via.placeholder.com/100?text=DJI', alt: 'DJI', width: 80 },
-    { src: 'https://via.placeholder.com/100?text=GoPro', alt: 'GoPro', width: 100 },
+    { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/DJI_logo.png/320px-DJI_logo.png', alt: 'DJI', width: 80 },
+    { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/GoPro_Logo.svg/320px-GoPro_Logo.svg.png', alt: 'GoPro', width: 120 },
     { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Samsung_Logo.svg/320px-Samsung_Logo.svg.png', alt: 'Samsung', width: 150 },
-    { src: 'https://via.placeholder.com/100?text=Leica', alt: 'Leica', width: 100 },
-    { src: 'https://via.placeholder.com/100?text=Fujifilm', alt: 'Fujifilm', width: 160 },
-    { src: 'https://via.placeholder.com/100?text=Blackmagic', alt: 'Blackmagic', width: 150 },
-    { src: 'https://via.placeholder.com/100?text=Panasonic', alt: 'Panasonic', width: 120 },
+    { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Leica_Camera_logo.svg/320px-Leica_Camera_logo.svg.png', alt: 'Leica', width: 100 },
+    { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Fujifilm_logo.svg/320px-Fujifilm_logo.svg.png', alt: 'Fujifilm', width: 140 },
+    { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Blackmagic_Design_logo.svg/320px-Blackmagic_Design_logo.svg.png', alt: 'Blackmagic', width: 150 },
+    { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Panasonic_logo_%28Blue%29.svg/320px-Panasonic_logo_%28Blue%29.svg.png', alt: 'Panasonic', width: 140 },
     { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Adobe_Corporate_Logo.png/320px-Adobe_Corporate_Logo.png', alt: 'Adobe', width: 100 },
   ];
 
   const secondRowLogos = [
-    { src: 'https://via.placeholder.com/100?text=Hasselblad', alt: 'Hasselblad', width: 140 },
-    { src: 'https://via.placeholder.com/100?text=Canon', alt: 'Canon', width: 120 },
-    { src: 'https://via.placeholder.com/100?text=Nikon', alt: 'Nikon', width: 100 },
-    { src: 'https://via.placeholder.com/100?text=Phase+One', alt: 'Phase One', width: 130 },
-    { src: 'https://via.placeholder.com/100?text=Sony', alt: 'Sony', width: 140 },
-    { src: 'https://via.placeholder.com/100?text=Olympus', alt: 'Olympus', width: 100 },
-    { src: 'https://via.placeholder.com/100?text=Sigma', alt: 'Sigma', width: 90 },
-    { src: 'https://via.placeholder.com/100?text=Tamron', alt: 'Tamron', width: 120 },
+    { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Hasselblad_logo.svg/320px-Hasselblad_logo.svg.png', alt: 'Hasselblad', width: 160 },
+    { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Canon_logo_2016.svg/320px-Canon_logo_2016.svg.png', alt: 'Canon', width: 140 },
+    { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Nikon_logo.svg/320px-Nikon_logo.svg.png', alt: 'Nikon', width: 120 },
+    { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Phase_One_logo.svg/320px-Phase_One_logo.svg.png', alt: 'Phase One', width: 160 },
+    { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Sony_Logo_2019.svg/320px-Sony_Logo_2019.svg.png', alt: 'Sony', width: 140 },
+    { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Olympus_Logo.svg/320px-Olympus_Logo.svg.png', alt: 'Olympus', width: 140 },
+    { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Sigma_logo.svg/320px-Sigma_logo.svg.png', alt: 'Sigma', width: 120 },
+    { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Tamron_logo_2018.svg/320px-Tamron_logo_2018.svg.png', alt: 'Tamron', width: 140 },
   ];
 
   // Duplicate logos for seamless looping
